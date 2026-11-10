@@ -1,0 +1,45 @@
+.trading-bots {
+    height: 100%;
+    overflow-y: auto;
+    padding: 3.2rem;
+    color: var(--text-general);
+    background: var(--general-main-1);
+
+    &__header, &__card, &__note { max-width: 96rem; margin-inline: auto; }
+    &__eyebrow { font-size: 1.1rem; letter-spacing: 0.18em; color: var(--text-less-prominent); }
+    h1 { margin: 0.8rem 0; font-size: 3.2rem; font-weight: 700; }
+    p { font-size: 1.4rem; line-height: 1.6; color: var(--text-less-prominent); }
+    &__card {
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        gap: 2.4rem;
+        margin-top: 2.8rem;
+        padding: 3.2rem;
+        border: 1px solid var(--border-normal);
+        border-left: 4px solid var(--brand-red-coral, #c85c62);
+        border-radius: 1.2rem;
+        background: var(--general-section-1);
+    }
+    &__number { font-size: 4.8rem; font-weight: 700; color: var(--text-less-prominent); opacity: 0.5; }
+    &__tag { font-size: 1rem; letter-spacing: 0.12em; color: var(--text-less-prominent); }
+    h2 { margin: 1rem 0; font-size: 2rem; line-height: 1.4; }
+    dl { display: flex; flex-wrap: wrap; gap: 2.4rem; margin: 2.4rem 0; }
+    dt { font-size: 1.2rem; color: var(--text-less-prominent); margin-bottom: 0.6rem; }
+    dd { margin: 0; font-size: 1.4rem; font-weight: 600; }
+    &__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 2rem; }
+    button { border: none; border-radius: 0.6rem; padding: 1.2rem 2rem; background: var(--brand-red-coral, #c85c62); color: #fff; font: inherit; font-size: 1.4rem; font-weight: 700; cursor: pointer; }
+    button:hover:not(:disabled) { filter: brightness(1.1); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    a { color: var(--text-general); font-size: 1.4rem; text-underline-offset: 0.4rem; }
+    button:focus-visible, a:focus-visible { outline: 2px solid var(--text-general); outline-offset: 4px; }
+    &__error { color: var(--text-loss-danger); }
+    &__note { margin-top: 2rem; }
+
+    @media (width <= 600px) {
+        padding: 2rem 1.6rem;
+        h1 { font-size: 2.6rem; }
+        &__card { grid-template-columns: 1fr; gap: 1.2rem; padding: 2rem; }
+        &__number { font-size: 3rem; }
+        h2 { overflow-wrap: anywhere; }
+    }
+}
